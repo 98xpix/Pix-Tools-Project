@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #919191;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    z-index: 10000;
+}
+
+header h2 {
+    margin: 0;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Sidebar */
+aside {
+    position: fixed;
+    right: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+aside ul {
+    list-style: none;
+    padding: 20px 0 0 0;
+}
+
+aside ul li {
+    padding: 10px;
+    text-align: left;
+}
+
+aside ul li a {
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+    display: block;
+    padding: 10px;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-grow: 1;
+}
+
+.calculator {
+    width: 340px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc; /* Added border around the calculator */
+}
+
+.display {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Center the display */
+    align-items: center; /* Center the content within the display */
+}
+
+.display input {
+    width: 50; /* Adjust width to create space on the sides */
+    height: 100%;
+    font-size: 32px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    outline: none; /* Removed outline from the display */
+    text-align: left;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.key {
+    padding: 20px;
+    font-size: 24px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.key:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+}
+
+#operator {
+    background-color: #ff5733;
+    color: white;
+}
+
+#operator:hover {
+    background-color: #e04f2a;
+}
+
+#smooth {
+    background-color: #33a1ff;
+    color: white;
+}
+
+#smooth:hover {
+    background-color: #1e7db7;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    z-index: 10000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    .calculator {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .display {
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .display input {
+        font-size: 28px;
+        padding: 8px;
+    }
+
+    .keys {
+        grid-gap: 8px;
+    }
+
+    .key {
+        padding: 18px;
+        font-size: 22px;
+    }
+
+    aside {
+        width: 60%;
+        right: -60%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .calculator {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .display {
+        height: 45px;
+    }
+
+    .display input {
+        font-size: 24px;
+        padding: 6px;
+    }
+
+    .key {
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    aside {
+        width: 100%;
+        right: -100%;
+    }
+
+    aside ul li {
+        padding: 12px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix Tools - Timer</title>
+    <link rel="icon" type="image/x-icon" href="../build.png">
+    <link rel="stylesheet" href="timer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <h2><a href="../index.html">Pix Tools</a></h2>
+        <span onclick="show()" class="material-symbols-outlined">
+            menu
+        </span>
+    </header>
+    <aside id="aside">
+        <ul>
+            <li><a href="../pages/calculator.html">Calculator</a></li>
+            <li><a href="../pages/age.html">Age Calculator</a></li>
+            <li><a href="../pages/timer.html">Timer</a></li>
+            <li><a href="../pages/password_generator.html">Password Generator</a></li>
+        </ul>
+    </aside>
+    <div class="container">
+        <p id="counter">00:00:00:00</p>
+        <button id="start" class="keys" onclick="start()">Start</button>
+        <button id="pause" class="keys" onclick="pause()">Pause</button>
+        <button id="reset" class="keys" onclick="reset()">Reset</button>
+    </div>
+
+    <footer>
+        <h2>Pix Tools</h2>
+        <p>2024 &copy; Developped By Pix <a href="https://github.com/98xPix/" target="_blank"><img src="github.png" width="22px"></a>
+        </p>
+    </footer>
+    <script src="timer.js"></script>
+</body>
+</html>
